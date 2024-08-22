@@ -12,11 +12,13 @@ jobs:
         node-version: [8.x, 10.x, 12.x] 
     steps:
       - uses: actions/checkout@v2
+
       - name: npm install
         run: npm install
-      - name: npm test code
-      - run: chmod +rwx ./node_modules/.bin/jest
-        run: npm run test
+
+      - name: run test code
+        run: npm test
+      # 테스트 코드 실패 시 동작
       - name: if fail
         uses: actions/github-script@v4
         with:
