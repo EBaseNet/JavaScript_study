@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --config=jest.config.cjs"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,6 @@
   "description": "",
   "devDependencies": {
     "@babel/preset-env": "^7.25.3",
-    "jest": "^25.0.0"
+    "jest": "^24.1.0"
   }
 }
