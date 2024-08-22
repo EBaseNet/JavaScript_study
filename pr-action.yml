@@ -2,12 +2,12 @@ name: PR Script
 on:
   pull_request:
     branches:
-      -main
+      - main
 
  jobs:
   link:
     runs-on: [ubuntu-latest]
-    starategy:
+    strategy:
       matrix:
         node-version: [8.x, 10.x, 12.x] 
     steps:
