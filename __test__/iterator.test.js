@@ -1,7 +1,11 @@
-describe("", () => {
-    const a = 1, b = 1
-    test('1 + 1은 2다.', () => {
-        expect(a + b).toEqual(2);
+// import { test } from '../src/index.js'
+
+import { test } from '../src/index.js';
+
+describe("test", () => {
+
+    it('1 + 1은 2다.', () => {
+        expect(1 + 1).toEqual(2);
     })
 
     
