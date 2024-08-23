@@ -35,7 +35,7 @@ jobs:
             await github.rest.pulls.createReview({
               ...context.repo,
               pull_number,
-              body: "테스트 코드를 다시 확인해주세요."
+              body: "테스트 코드를 다시 확인해주세요.",
               event: "REQUEST_CHANGES"
             })
 
