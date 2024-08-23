@@ -1,3 +1,3 @@
-export const test = () => {
-    return;
+export const getNumber = (num) => {
+    return num
 }
