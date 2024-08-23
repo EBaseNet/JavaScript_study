@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x, 20.x] 
+        node-version: [8.x, 10.x, 12.x, 20.x]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,19 +25,19 @@ jobs:
         with:
           github-token: ${{secrets.TOKEN}}
           script: |
-              const ref = "${{github.ref}}"
-              const pull_number = Number(ref.split("/")[2])
+            const ref = "${{github.ref}}"
+            const pull_number = Number(ref.split("/")[2])
 
-              await github.pulls.createReview({
-                ...context.repo,
-                pull_number,
-                body: "테스트 코드를 다시 확인해주세요."
-                event: "REQUEST_CHANGES"
-              })
+            await github.pulls.createReview({
+              ...context.repo,
+              pull_number,
+              body: "테스트 코드를 다시 확인해주세요."
+              event: "REQUEST_CHANGES"
+            })
 
-              await github.pulls.update({
-                ...context.repo,
-                pull_number,
-                state: 'closed'
-              })
+            await github.pulls.update({
+              ...context.repo,
+              pull_number,
+              state: 'closed'
+            })
           if: failure()
