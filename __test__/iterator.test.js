@@ -14,6 +14,6 @@ describe("test", () => {
 
     it('2 + 2는 4 입니다.', () => {
         const num = getNumber(2)
-        expect(num + num).toEqual(3);
+        expect(num + num).toEqual(4);
     })
 })
