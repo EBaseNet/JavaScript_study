@@ -2,6 +2,11 @@ import { getNumber } from "../src";
 
 describe("test", () => {
 
+    it('1을 반환합니다', () => {
+        const num = getNumber(1)
+        expect(num).toEqual(1)
+    })
+
     it('1 + 1은 2 입니다.', () => {
         const num = getNumber(1)
         expect(num + num).toEqual(2);
