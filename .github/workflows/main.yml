@@ -4,7 +4,7 @@ on:
     types:
       - opened
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   build:
@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      
+
       - name: Setup Node
         uses: actions/setup-node@v4
-        with: 
+        with:
           node-version: 20.x
 
       - name: yarn install
@@ -31,11 +31,7 @@ jobs:
           script: |
             const ref = "${{github.ref}}"
             const pull_number = Number(ref.split("/")[2])
-<<<<<<< HEAD
-            
-=======
-            console.log(github.rest.pulls)
->>>>>>> f29063cf8b86da52b6c7df5f8bf9d4c25f447ed8
+
             await github.rest.pulls.createReview({
               ...context.repo,
               pull_number,
