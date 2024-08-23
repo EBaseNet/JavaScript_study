@@ -32,14 +32,14 @@ jobs:
             const ref = "${{github.ref}}"
             const pull_number = Number(ref.split("/")[2])
 
-            await github.rest.pulls.createReview({
+            await github.pulls.createReview({
               ...context.repo,
               pull_number,
               body: "테스트 코드를 다시 확인해주세요.",
               event: "REQUEST_CHANGES"
             })
 
-            await github.rest.pulls.update({
+            await github.pulls.update({
               ...context.repo,
               pull_number,
               state: 'closed'
