@@ -1,14 +1,12 @@
-import { getNumber } from "../src";
+import { objectLoop } from "../src";
 
 describe("test", () => {
 
     it('1 + 1은 2 입니다.', () => {
-        const num = getNumber(1)
-        expect(num + num).toEqual(2);
+        const obj = {a1: 'a1', a2: 'a2'}
+        const temp = objectLoop(obj)
+        expect(temp.next().value).toEqual('a1');
+        expect(temp.next().value).toEqual('a2');
     })
 
-    it('2 + 2는 4 입니다.', () => {
-        const num = getNumber(2)
-        expect(num + num).toEqual(3);
-    })
 })
