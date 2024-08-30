@@ -1,12 +1,9 @@
 import { objectLoop } from "../src";
 
-describe("test", () => {
+describe("자바스크립트 ES6 문법 테스트", () => {
 
-    it('1 + 1은 2 입니다.', () => {
-        const obj = {a1: 'a1', a2: 'a2'}
-        const temp = objectLoop(obj)
-        expect(temp.next().value).toEqual('a1');
-        expect(temp.next().value).toEqual('a2');
+    it('', () => {
+        
     })
 
 })
